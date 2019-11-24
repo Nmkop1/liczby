@@ -1,0 +1,315 @@
+$color_5: #3e4e59;
+$color_1: #000000;
+$color_2: #C2E7F2;
+$color_3:#F1F0E2;
+$color_4:#D9BB93;
+$color_6:rgb(42, 42, 42);
+$color_7: #3c4850;
+$color_8: #9cb8b3;
+$color_9:rgba(0,0,0,.8);
+
+
+
+
+//filtr nakładka
+@mixin over1{
+    content: "";
+    z-index: 0;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none repeat 0 0 rgba(30, 30, 30, .6)
+}
+
+// button
+@mixin button{  
+    color: $color_3;
+    position: relative;
+    padding: 8px 20px;
+    border: 1px solid $color_kontrast;
+    @include transition;
+    @include screen('mobile') {
+       padding: 12px 30px;
+    }
+    &:hover {        
+        background-color: $color_hover;
+        
+    }
+}
+
+
+
+
+@mixin ham {
+    .hamburger {
+        position: fixed;
+        top: 25px;
+        right: 25px;
+        transition: all 0.3s ease-in-out;
+        display: none;
+        z-index: 1010;
+
+    }
+
+    .hamburger:hover {
+        cursor: pointer;
+    }
+
+    .line {
+        width: 25px;
+        height: 3px;
+        background-color: $color_1;
+        display: block;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger.is-active {
+        transform: rotate(45deg);
+    }
+
+    .hamburger:before {
+        content: "";
+        position: absolute;
+        box-sizing: border-box;
+        width: 30px;
+        height: 30px;
+        border: 2px solid transparent;
+        top: calc(50% - 15px);
+        left: calc(50% - 15px);
+        border-radius: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger.is-active:before {
+        border: 2px solid $color_1;
+    }
+
+    .hamburger.is-active .line {
+        width: 20px;
+    }
+
+    .hamburger.is-active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.is-active .line:nth-child(1) {
+        transform: translateY(8px);
+    }
+
+    .hamburger.is-active .line:nth-child(3) {
+        transform: translateY(-8px) rotate(90deg);
+    }
+
+}
+
+@mixin sectionText {
+    padding: 6% 0;
+    text-align: center;
+
+    h1 {
+        color: $color_1;
+        font-weight: 700;
+
+    }
+
+    p {
+        margin-top: 3%;
+
+    }
+}
+
+
+@mixin button {
+   
+  width: 150px;
+    text-align: center;
+   margin: 0 auto ;
+    display: block;
+
+    a {
+        position: relative;         
+        font-size: 1em;
+        padding: 8px 20px;
+        background-color: transparent;
+        border: 1px solid $color_1;
+        color: $color_1;
+        font-weight: 700;
+        display: block;
+        overflow: hidden;
+        transition: .6s linear;
+    }
+
+    a::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $color_1;
+        right: 100%;
+        top:  100%;
+        transform: translateY(-100%);
+        transition: left .3s linear, height .2s .3s linear;
+        z-index: -1
+    }
+
+    a:hover::before {
+        left: 0%;
+        height: 104%
+    }
+
+    a:hover {
+        color: white;
+        z-index: 100;
+    }
+
+
+
+}
+
+
+@mixin center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+// rozmiar elementu
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+//Media queries
+@mixin screen($size) {
+    $desktop: "(min-width: 992px)";
+    $tablet: "(min-width: 768px)";
+    $mobile: "(min-width: 576px)";
+    $landscape: "(max-width: 812px )";
+
+    @if $size==desktop {
+        @media only screen and #{$desktop} {
+            @content;
+        }
+    }
+
+    @else if $size==tablet {
+        @media only screen and #{$tablet} {
+            @content;
+        }
+    }
+
+    @else if $size==mobile {
+        @media only screen and #{$mobile} {
+            @content;
+        }
+    }
+
+    @else if $size==landscape {
+        @media only screen and #{$landscape} and (orientation: landscape) {
+            @content;
+        }
+    }
+
+    @else {
+        @media only screen and #{$size} {
+            @content;
+        }
+    }
+}
+
+//przejście
+@mixin transition {
+    transition: all .5s ease-in-out;
+}
+
+
+//filtr nakładka
+@mixin over {
+    content: "";
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none repeat 0 0 rgba(30, 30, 30, .6)
+}
+
+
+//napis centrum
+@mixin centrum {
+    text-align: center;
+
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 1, 5rem;
+        color: $color_3;
+        position: relative;
+        margin-bottom: 3rem;
+    }
+
+    a {
+        position: relative;
+        @include button;
+        @include transition;
+        background-color: $color_kontrast;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
+
+//Facebook
+@mixin face {
+    @include transition;
+
+    &:hover {
+        color: #29487D;
+        cursor: pointer;
+    }
+}
+
+//Twitter
+@mixin twitter {
+    @include transition;
+
+    &:hover {
+        color: #1DA1F2;
+        cursor: pointer;
+    }
+}
+
+//google
+@mixin google {
+    @include transition;
+
+    &:hover {
+        color: #DC4E41;
+        cursor: pointer;
+    }
+}
+
+//instagram
+@mixin instagram {
+    @include transition;
+
+    &:hover {
+        color: #CC307C;
+        cursor: pointer;
+    }
+
+}

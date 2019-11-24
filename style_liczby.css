@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin-ext");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, li, ul {
+  list-style: none;
+  text-decoration: none; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+.tablicaWrap {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: black; }
+  .tablicaWrap .section1 {
+    background-image: url(foto/tlo_liczby.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    top: 0;
+    left: 0; }
+    .tablicaWrap .section1 .text1,
+    .tablicaWrap .section1 .text2 {
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      opacity: 1;
+      color: aliceblue;
+      font-size: 1.6em;
+      padding-bottom: 20%;
+      display: none; }
+      @media only screen and (max-width: 812px) and (orientation: landscape) {
+        .tablicaWrap .section1 .text1,
+        .tablicaWrap .section1 .text2 {
+          padding-bottom: 10%; } }
+      @media only screen and (min-width: 768px) {
+        .tablicaWrap .section1 .text1,
+        .tablicaWrap .section1 .text2 {
+          padding-bottom: 10%; } }
+    .tablicaWrap .section1 .text2 {
+      font-size: 2.5em;
+      color: white;
+      font-weight: 700; }
+    .tablicaWrap .section1 .okno1 {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      top: 0;
+      left: 0;
+      background-color: aliceblue;
+      width: 90%;
+      height: 30%;
+      border-radius: 5%;
+      padding: 3%;
+      margin-bottom: 5%;
+      opacity: 1;
+      display: none; }
+      @media only screen and (max-width: 812px) and (orientation: landscape) {
+        .tablicaWrap .section1 .okno1 {
+          height: 50%;
+          margin-bottom: 1%; } }
+      @media only screen and (min-width: 768px) {
+        .tablicaWrap .section1 .okno1 {
+          margin-bottom: 2%;
+          width: 50%; } }
+      .tablicaWrap .section1 .okno1 p {
+        font-size: 1.4em;
+        font-weight: 700;
+        text-align: center;
+        padding-bottom: 10px; }
+      .tablicaWrap .section1 .okno1 p:nth-child(2) {
+        font-size: 1.2em; }
+        @media only screen and (min-width: 768px) {
+          .tablicaWrap .section1 .okno1 p:nth-child(2) {
+            padding-bottom: 50px; } }
+    .tablicaWrap .section1 .okno2,
+    .tablicaWrap .section1 .okno3,
+    .tablicaWrap .section1 .okno4 {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: none;
+      text-align: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      margin-bottom: 5%;
+      background-color: aliceblue;
+      width: 90%;
+      height: auto;
+      border-radius: 5%;
+      padding: 3%;
+      bottom: 3%; }
+      @media only screen and (max-width: 812px) and (orientation: landscape) {
+        .tablicaWrap .section1 .okno2,
+        .tablicaWrap .section1 .okno3,
+        .tablicaWrap .section1 .okno4 {
+          width: 70%; } }
+      @media only screen and (min-width: 768px) {
+        .tablicaWrap .section1 .okno2,
+        .tablicaWrap .section1 .okno3,
+        .tablicaWrap .section1 .okno4 {
+          margin-bottom: 2%;
+          width: 50%; } }
+      .tablicaWrap .section1 .okno2 p,
+      .tablicaWrap .section1 .okno3 p,
+      .tablicaWrap .section1 .okno4 p {
+        font-size: 1.2em;
+        font-weight: 700;
+        text-align: center;
+        padding-bottom: 10px;
+        line-height: 1.2em; }
+      .tablicaWrap .section1 .okno2 p:nth-child(2),
+      .tablicaWrap .section1 .okno3 p:nth-child(2),
+      .tablicaWrap .section1 .okno4 p:nth-child(2) {
+        font-size: 1em; }
+      .tablicaWrap .section1 .okno2 span,
+      .tablicaWrap .section1 .okno3 span,
+      .tablicaWrap .section1 .okno4 span {
+        font-size: 1.4em;
+        font-weight: 700; }
+    .tablicaWrap .section1 .okno4 {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: none;
+      text-align: center;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      position: relative;
+      background-color: aliceblue;
+      width: 95%;
+      height: auto;
+      border-radius: 5%;
+      padding: 2%;
+      bottom: 2%; }
+      @media only screen and (min-width: 768px) {
+        .tablicaWrap .section1 .okno4 {
+          margin-bottom: 2%;
+          width: 60%; } }
+      .tablicaWrap .section1 .okno4 p {
+        font-size: 1.2em;
+        line-height: 1.1em;
+        text-align: center;
+        padding-bottom: 10px; }
+      .tablicaWrap .section1 .okno4 p:nth-child(2) {
+        font-size: 1em; }
+      .tablicaWrap .section1 .okno4 span {
+        font-size: 1.2em;
+        font-weight: 700; }
+  .tablicaWrap .tablica {
+    padding-top: 2%;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    display: none;
+    background-color: black;
+    color: whitesmoke; }
+    @media only screen and (max-width: 812px) and (orientation: landscape) {
+      .tablicaWrap .tablica {
+        padding-top: 1%; } }
+    @media only screen and (min-width: 768px) {
+      .tablicaWrap .tablica {
+        height: 85%;
+        width: 95%; } }
+    .tablicaWrap .tablica .items {
+      flex-basis: 19%;
+      height: 4.3%;
+      max-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: 0 .5%;
+      border: 1px solid white; }
+      @media only screen and (max-width: 812px) and (orientation: landscape) {
+        .tablicaWrap .tablica .items {
+          flex-basis: 11%;
+          height: 6%; } }
+      @media only screen and (min-width: 768px) {
+        .tablicaWrap .tablica .items {
+          height: 10%;
+          max-height: 150px;
+          flex-basis: 7%; } }
+      .tablicaWrap .tablica .items p {
+        font-size: 1em;
+        padding: 1% 3% 1% 1%; }
+        @media only screen and (max-width: 812px) and (orientation: landscape) {
+          .tablicaWrap .tablica .items p {
+            font-size: .8em;
+            padding: 1% 5% 1% 1%; } }
+        @media only screen and (min-width: 768px) {
+          .tablicaWrap .tablica .items p {
+            font-size: 1.5em;
+            padding: 1% 8px 1% 1%; } }
+      .tablicaWrap .tablica .items .i {
+        font-size: 1.4em;
+        padding-left: 20%;
+        width: 70%;
+        height: 80%;
+        color: black;
+        background-color: whitesmoke;
+        display: flex;
+        align-items: center; }
+        @media only screen and (max-width: 812px) and (orientation: landscape) {
+          .tablicaWrap .tablica .items .i {
+            width: 50%;
+            font-size: 1em; } }
+        @media only screen and (min-width: 768px) {
+          .tablicaWrap .tablica .items .i {
+            font-size: 2.2em;
+            padding-left: 10%;
+            width: 60%; } }
+    .tablicaWrap .tablica .napisTabela {
+      line-height: 1.5em;
+      font-size: 1.1em;
+      text-align: center;
+      align-self: flex-end;
+      margin: 0 auto; }
+      .tablicaWrap .tablica .napisTabela p {
+        padding: 1% 1% 3% 1%; }
+        @media only screen and (max-width: 812px) and (orientation: landscape) {
+          .tablicaWrap .tablica .napisTabela p {
+            padding: 1%; } }
+        @media only screen and (min-width: 768px) {
+          .tablicaWrap .tablica .napisTabela p {
+            font-size: 1.4em; } }
+  .tablicaWrap .section2 {
+    background-image: url(foto/tlo_liczby1.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0; }
+    @media only screen and (max-width: 812px) and (orientation: landscape) {
+      .tablicaWrap .section2 {
+        justify-content: space-between; } }
+    .tablicaWrap .section2 .text3,
+    .tablicaWrap .section2 .text4 {
+      color: white;
+      font-size: 1.6em;
+      display: none;
+      margin-top: 30%; }
+      @media only screen and (max-width: 812px) and (orientation: landscape) {
+        .tablicaWrap .section2 .text3,
+        .tablicaWrap .section2 .text4 {
+          margin-top: 10%; } }
+      @media only screen and (min-width: 768px) {
+        .tablicaWrap .section2 .text3,
+        .tablicaWrap .section2 .text4 {
+          margin-top: 5%; } }
+      .tablicaWrap .section2 .text3 span,
+      .tablicaWrap .section2 .text4 span {
+        font-size: 2.5em; }
+    .tablicaWrap .section2 .karta {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .tablicaWrap .section2 .karta .fa {
+        font-size: 6em;
+        color: #000000;
+        opacity: .8; }
+        @media only screen and (max-width: 812px) and (orientation: landscape) {
+          .tablicaWrap .section2 .karta .fa {
+            font-size: 3.2em; } }
+    .tablicaWrap .section2 .nowy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: space-between;
+      margin-top: 20%; }
+      @media only screen and (max-width: 812px) and (orientation: landscape) {
+        .tablicaWrap .section2 .nowy {
+          margin-top: 7%; } }
+      @media only screen and (min-width: 768px) {
+        .tablicaWrap .section2 .nowy {
+          margin-top: 5%; } }
+      .tablicaWrap .section2 .nowy .bingo {
+        opacity: 0;
+        color: white;
+        font-size: 1.6em; }
+        .tablicaWrap .section2 .nowy .bingo span {
+          font-size: 2.5em; }
+      .tablicaWrap .section2 .nowy .takNie {
+        opacity: 0;
+        color: aliceblue;
+        font-size: 1.6em;
+        padding-bottom: 4%;
+        text-align: center; }
+        @media only screen and (max-width: 812px) and (orientation: landscape) {
+          .tablicaWrap .section2 .nowy .takNie {
+            padding-bottom: 2%; } }
+        @media only screen and (min-width: 768px) {
+          .tablicaWrap .section2 .nowy .takNie {
+            padding-bottom: 10%; } }
+        .tablicaWrap .section2 .nowy .takNie div {
+          display: flex;
+          justify-content: center;
+          padding: 2%; }
+        .tablicaWrap .section2 .nowy .takNie .tak,
+        .tablicaWrap .section2 .nowy .takNie .nie {
+          width: 130px;
+          text-align: center;
+          margin: 0 auto;
+          display: block; }
+          .tablicaWrap .section2 .nowy .takNie .tak a,
+          .tablicaWrap .section2 .nowy .takNie .nie a {
+            position: relative;
+            font-size: 1em;
+            padding: 7px 15px;
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            font-weight: 700;
+            display: block;
+            overflow: hidden;
+            -webkit-transition: .6s linear;
+            transition: .6s linear; }
+          .tablicaWrap .section2 .nowy .takNie .tak a::before,
+          .tablicaWrap .section2 .nowy .takNie .nie a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            right: 100%;
+            top: 100%;
+            -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+            -webkit-transition: left .3s linear, height .2s .3s linear;
+            transition: left .3s linear, height .2s .3s linear;
+            z-index: -1; }
+          .tablicaWrap .section2 .nowy .takNie .tak a:hover::before,
+          .tablicaWrap .section2 .nowy .takNie .nie a:hover::before {
+            left: 0%;
+            height: 104%; }
+          .tablicaWrap .section2 .nowy .takNie .tak a:hover,
+          .tablicaWrap .section2 .nowy .takNie .nie a:hover {
+            color: black;
+            z-index: 100; }
+  .tablicaWrap .button1,
+  .tablicaWrap .button2,
+  .tablicaWrap .button3,
+  .tablicaWrap .button4 {
+    width: 150px;
+    text-align: center;
+    margin: 0 auto;
+    display: block; }
+    .tablicaWrap .button1 a,
+    .tablicaWrap .button2 a,
+    .tablicaWrap .button3 a,
+    .tablicaWrap .button4 a {
+      position: relative;
+      font-size: 1em;
+      padding: 8px 20px;
+      background-color: transparent;
+      border: 1px solid #000000;
+      color: #000000;
+      font-weight: 700;
+      display: block;
+      overflow: hidden;
+      transition: .6s linear; }
+    .tablicaWrap .button1 a::before,
+    .tablicaWrap .button2 a::before,
+    .tablicaWrap .button3 a::before,
+    .tablicaWrap .button4 a::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #000000;
+      right: 100%;
+      top: 100%;
+      transform: translateY(-100%);
+      transition: left .3s linear, height .2s .3s linear;
+      z-index: -1; }
+    .tablicaWrap .button1 a:hover::before,
+    .tablicaWrap .button2 a:hover::before,
+    .tablicaWrap .button3 a:hover::before,
+    .tablicaWrap .button4 a:hover::before {
+      left: 0%;
+      height: 104%; }
+    .tablicaWrap .button1 a:hover,
+    .tablicaWrap .button2 a:hover,
+    .tablicaWrap .button3 a:hover,
+    .tablicaWrap .button4 a:hover {
+      color: white;
+      z-index: 100; }
+  .tablicaWrap .button5 {
+    width: 150px;
+    text-align: center;
+    margin: 0 auto;
+    display: block; }
+    @media only screen and (max-width: 812px) and (orientation: landscape) {
+      .tablicaWrap .button5 {
+        width: 100px; } }
+    .tablicaWrap .button5 a {
+      position: relative;
+      font-size: 1em;
+      padding: 7px 15px;
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      font-weight: 700;
+      display: block;
+      overflow: hidden;
+      -webkit-transition: .6s linear;
+      transition: .6s linear; }
+      @media only screen and (max-width: 812px) and (orientation: landscape) {
+        .tablicaWrap .button5 a {
+          padding: 6px 10px; } }
+    .tablicaWrap .button5 a::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      right: 100%;
+      top: 100%;
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+      -webkit-transition: left .3s linear, height .2s .3s linear;
+      transition: left .3s linear, height .2s .3s linear;
+      z-index: -1; }
+    .tablicaWrap .button5 a:hover::before {
+      left: 0%;
+      height: 104%; }
+    .tablicaWrap .button5 a:hover {
+      color: black;
+      z-index: 100; }
+
+/*# sourceMappingURL=style_liczby.css.map */
